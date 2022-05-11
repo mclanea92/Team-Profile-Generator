@@ -95,7 +95,7 @@ const addEmployee = () => {
         }
     ])
     .then(employeeData => {
-        let { name, id, role, github, school, confirmAddEmployee} = employeeData;
+        let { name, id, email, role, github, school, confirmAddEmployee} = employeeData;
         let employee;
 
         if (role === 'Engineer') {
@@ -120,7 +120,7 @@ const addEmployee = () => {
 
 // create HTML file with fs
 const writeFile = data => {
-    fs.writeFile('./dist/index.html', data, err => {
+    fs.writeFile('./dist/employeeindex.html', data, err => {
         if (err) {
             console.log(err);
             return;
