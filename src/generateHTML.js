@@ -1,7 +1,7 @@
 
 
 // creates card for manager
-const generateManager = manager => {
+const generateManager = function (manager) {
     return
     `
     <div class="col-4 mt-4">
@@ -22,7 +22,7 @@ const generateManager = manager => {
 };
 
 // creates card for engineer
-const generateEngineer = engineer => {
+const generateEngineer = function (engineer) {
     return
     `
     <div class="col-4 mt-4">
@@ -60,37 +60,37 @@ const generateIntern = function (intern) {
     `;
 };
 
-// generateHTML = (data) => {
-//     pageArray = [];
+generateHTML = (data) => {
+    pageArray = [];
 
-//     for (let i = 0; i < data.length; i++) {
-//         const employee = data[i];
-//         const role = employee.getRole();
+    for (let i = 0; i < data.length; i++) {
+        const employee = data[i];
+        const role = employee.getRole();
 
-//         if (role === 'Manager') {
-//             const managerCard = generateManager(employee);
+        if (role === 'Manager') {
+            const managerCard = generateManager(employee);
+            console.log(managerCard) // not getting mangagercard for some reason
+            pageArray.push(managerCard);
+        }
 
-//             pageArray.push(managerCard);
-//         }
+        if (role === 'Engineer') {
+            const engineerCard = generateEngineer(employee)
 
-//         if (role === 'Engineer') {
-//             const engineerCard = generateEngineer(employee)
+            pageArray.push(engineerCard);
+        }
+        if (role === 'Intern') {
+            const internCard = generateIntern(employee);
 
-//             pageArray.push(engineerCard);
-//         }
-//         if (role === 'Intern') {
-//             const internCard = generateIntern(employee);
+            pageArray.push(internCard)
+        }
 
-//             pageArray.push(internCard)
-//         }
+    }
 
-//     }
+    const employeeCards = pageArray.join('')
 
-//     const employeeCards = pageArray.join('')
-
-//     const generateTeam = generateTeamPage(employeeCards);
-//     return generateTeam;
-// };
+    const generateTeam = generateTeamPage(employeeCards);
+    return generateTeam;
+};
 
 
 // generates HTML
@@ -134,37 +134,37 @@ const generateTeamPage = function (employeeCards) {
 };
 
 // export
-// module.exports = generateHTML;
-module.exports = (data) => {
-    pageArray = [];
-    console.log(data)
-    for (let i = 0; i < data.length; i++) {
-        const employee = data[i];
-        const role = employee.getRole();
+module.exports = generateHTML;
+// module.exports = (data) => {
+//     pageArray = [];
+//     console.log(data)
+//     for (let i = 0; i < data.length; i++) {
+//         const employee = data[i];
+//         const role = employee.getRole();
 
-        if (role === 'Manager') {
+//         if (role === 'Manager') {
            
-            const managerCard = generateManager(employee);
-            console.log(managerCard) // not getting mangagercard for some reason
-            pageArray.push(managerCard);
-        }
+//             const managerCard = generateManager(employee);
+//             console.log(managerCard) // not getting mangagercard for some reason
+//             pageArray.push(managerCard);
+//         }
         
-        if (role === 'Engineer') {
-            const engineerCard = generateEngineer(employee)
+//         if (role === 'Engineer') {
+//             const engineerCard = generateEngineer(employee)
 
-            pageArray.push(engineerCard);
-        }
-        if (role === 'Intern') {
-            const internCard = generateIntern(employee);
+//             pageArray.push(engineerCard);
+//         }
+//         if (role === 'Intern') {
+//             const internCard = generateIntern(employee);
 
-            pageArray.push(internCard)
-        }
+//             pageArray.push(internCard)
+//         }
 
-    }
+//     }
 
-    const employeeCards = pageArray.join('')
+//     const employeeCards = pageArray.join('')
 
-    const generateTeam = generateTeamPage(employeeCards);
-    // console.log(generateTeam)
-    return generateTeam;
-};
+//     const generateTeam = generateTeamPage(employeeCards);
+//     // console.log(generateTeam)
+//     return generateTeam;
+// };
