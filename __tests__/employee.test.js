@@ -1,8 +1,9 @@
 
+const { describe } = require('yargs');
 const Employee = require('../lib/Employee');
 
 // creates employee object
-test('creates am employee object', () => {
+describe('creates am employee object', () => {
     const employee = new Employee('Adam', 100, 'mclanea92@gmail.com');
 
     expect(employee.name).toEqual(expect.any(String));
@@ -11,19 +12,19 @@ test('creates am employee object', () => {
 });
 
 // gets namefrom employee data
-test('get employee name', () => {
+describe('get employee name', () => {
     const employee = new Employee('Adam', 100, 'mclanea92@gmail.com');
     expect(employee.getName()).toEqual(expect.any(String));
 });
 
 // get id from employee data
-test('get employee id', () => {
+describe('get employee id', () => {
     const employee = new Employee('Adam', 100, 'mclanea92@gmail.com');
     expect(employee.getID()).toEqual(expect.any(Number));
 });
 
 // get email from employee data
-test('get employee email', () => {
+describe('get employee email', () => {
     const employee = new Employee('Adam', 100, 'mclanea92@gmail.com');
 
     expect(employee.getEmail()).toEqual(expect.any(String));
@@ -31,7 +32,7 @@ test('get employee email', () => {
 });
 
 // get role of employee
-test('get role of employee', () => {
+describe('get role of employee', () => {
     const employee = new Employee('Adam', 100, 'mclanea92@gmail.com');
 
     expect(employee.getRole()).toEqual('Employee');
