@@ -49,7 +49,7 @@ const addManager = () => {
         const manager = new Manager (name, id, email, officeNumber);
 
         teamArray.push(manager); 
-        console.log(manager); 
+        // console.log(manager); 
     })
 };
 
@@ -96,16 +96,16 @@ const addEmployee = () => {
     ])
     .then(employeeData => {
         let { name, id, email, role, github, school, confirmAddEmployee} = employeeData;
-        let employee;
+        let employee = ''; // might change back
 
         if (role === 'Engineer') {
             employee = new Engineer (name, id, email, github);
 
-            console.log(employee);
+            // console.log(employee);
         }
         else if (role === 'Intern') {
             employee = new Intern (name, id, email, school);
-            console.log(employee);
+            // console.log(employee);
         }
 
         teamArray.push(employee);
@@ -120,6 +120,7 @@ const addEmployee = () => {
 
 // create HTML file with fs
 const writeFile = data => {
+    // console.log(data)
     fs.writeFile('./dist/employeeindex.html', data, err => {
         if (err) {
             console.log(err);
@@ -133,9 +134,11 @@ const writeFile = data => {
 addManager()
     .then(addEmployee)
     .then(teamArray => {
+        // console.log(teamArray)
         return generateHTML(teamArray);
     })
     .then(pageHTML => {
+        // console.log(pageHTML)
         return writeFile(pageHTML);
     })
     .catch(err => {
