@@ -69,7 +69,8 @@ generateHTML = (data) => {
 
         if (role === 'Manager') {
             const managerCard = generateManager(employee);
-            console.log(managerCard) // not getting mangagercard for some reason
+           
+            // console.log(managerCard) // not getting mangagercard for some reason
             pageArray.push(managerCard);
         }
 
