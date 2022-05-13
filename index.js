@@ -120,7 +120,7 @@ const addEmployee = () => {
 
 // create HTML file with fs
 const writeFile = data => {
-    // console.log(data)
+    console.log(data)
     fs.writeFile('./dist/employeeindex.html', data, err => {
         if (err) {
             console.log(err);
