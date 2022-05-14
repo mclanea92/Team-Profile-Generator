@@ -2,7 +2,7 @@
 
 // creates card for manager
 const generateManager = function (manager) {
-    return
+    return (
     `
     <div class="col-4 mt-4">
     <div class="card h-100">
@@ -18,12 +18,12 @@ const generateManager = function (manager) {
     </div>
 </div>
     
-    `;
+    `);
 };
 
 // creates card for engineer
 const generateEngineer = function (engineer) {
-    return
+    return (
     `
     <div class="col-4 mt-4">
     <div class="card h-100">
@@ -38,11 +38,11 @@ const generateEngineer = function (engineer) {
         </div>
     </div>
 </div>
-    `;
+    `);
 };
 
 const generateIntern = function (intern) {
-    return
+    return (
     `
     <div class="col-4 mt-4">
         <div class="card h-100">
@@ -57,7 +57,7 @@ const generateIntern = function (intern) {
             </div>
     </div>
 </div>
-    `;
+    `);
 };
 
 generateHTML = (data) => {
@@ -66,6 +66,7 @@ generateHTML = (data) => {
     for (let i = 0; i < data.length; i++) {
         const employee = data[i];
         const role = employee.getRole();
+        console.log(role)
 
         if (role === 'Manager') {
             const managerCard = generateManager(employee);
@@ -96,7 +97,7 @@ generateHTML = (data) => {
 
 // generates HTML
 const generateTeamPage = function (employeeCards) {
-    return 
+    return (
     `
     <!DOCTYPE html>
   <html lang="en">
@@ -131,7 +132,7 @@ const generateTeamPage = function (employeeCards) {
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </html>
 
-    `;
+    `);
 };
 
 // export
