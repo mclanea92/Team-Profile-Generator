@@ -14,7 +14,7 @@ describe('get school info', () => {
     expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school.toString()));
 })});
 
-// gets role of intern
+// if selected intern then grabs it here for test with addition of school
 describe('gets role of intern', () => {
     it('gets the role of intern from data', () => {
     const intern = new Intern('Adam', 100, 'mclanea92@gmail.com', 'UPenn')

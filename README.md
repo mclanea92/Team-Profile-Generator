@@ -16,8 +16,12 @@
 
   ## Video Tutorial
 
+
   ## GitHub URL
   https://github.com/mclanea92/Team-Profile-Generator
+
+  ## Page URL
+  https://mclanea92.github.io/Team-Profile-Generator/
 
   ## Acceptance Citeria
   ```md
@@ -51,4 +55,4 @@ THEN I exit the application, and the HTML is generated
   mclanea92
 
   ## Screenshots
-  
+

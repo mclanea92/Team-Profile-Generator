@@ -8,7 +8,7 @@ describe('creates object for manager', () => {
     expect(manager.officeNumber).toEqual(expect.any(Number)); 
 })});
 
-// gets role of manager
+// if selected manager then grabs it here for test with addition of phone number
 describe('gets manager role', () => {
     it('gets the manager role from data', () => {
     const manager = new Manager('Adam', 100, 'mclanea92@gmail.com', 2158289166);

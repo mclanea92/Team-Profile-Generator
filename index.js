@@ -6,13 +6,13 @@ const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 
-// node modules
+// node modules & fs for creation of html
 const fs = require('fs');
 const inquirer = require('inquirer');
 
 const teamArray = [];
 
-
+// this is where the manager questions are asked for the page
 const addManager = () => {
     return inquirer.prompt ([
         {
@@ -52,7 +52,7 @@ const addManager = () => {
         // console.log(manager); 
     })
 };
-
+// this is where the employees are added to the team after the manager selects intern or engineer
 const addEmployee = () => {
     return inquirer.prompt ([
         {
@@ -96,7 +96,7 @@ const addEmployee = () => {
     ])
     .then(employeeData => {
         let {name, id, email, role, github, school, confirmAddEmployee} = employeeData;
-        let employee = ''; // might change back
+        let employee = ''; 
 
         if (role === 'Engineer') {
             employee = new Engineer (name, id, email, github);
@@ -130,7 +130,7 @@ const writeFile = data => {
         }
     })
 };
-
+// adds manager first because first questions and then add employees afterwards
 addManager()
     .then(addEmployee)
     .then(teamArray => {

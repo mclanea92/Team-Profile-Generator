@@ -16,6 +16,7 @@ describe('get github from data of engineer', () => {
     expect(engineer.getGithub()).toEqual(expect.stringContaining(engineer.github.toString()));
 })});
 
+// if selected engineer then grabs it here for test with addition of github
 describe('get role of employee', () => {
     it('gets the role of employee from data', () => {
     
