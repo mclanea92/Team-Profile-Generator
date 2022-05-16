@@ -8,10 +8,10 @@ describe('creates am employee object', () => {
 
     
     const employee = new Employee('Adam', 100, 'mclanea92@gmail.com');
-
+        console.log(employee.name);
     expect(employee.name).toEqual(expect.any(String));
     expect(employee.id).toEqual(expect.any(Number));
-    expect(employee.emal).toEqual(expect.any(String));
+    expect(employee.email).toEqual(expect.any(String));
 })});
 
 // gets namefrom employee data
