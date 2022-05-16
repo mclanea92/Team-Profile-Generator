@@ -55,4 +55,14 @@ THEN I exit the application, and the HTML is generated
   mclanea92
 
   ## Screenshots
+  Screenshot below is the questions asked first to the manager of the team
+  ![screeshot of manager questions](./assets/images/manager.png)
+
+  Screenshot below is the questions asked to the employees of the team if intern or engineer
+  ![screenshot of questions to employees](./assets/images/employee.png)
+
+  Screenshot below is where the file is written to create the HTML page
+  ![screenshot of fs to create file](./assets/images/fs.png)
+
+
 
