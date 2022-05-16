@@ -1,5 +1,5 @@
 
-const { describe } = require('yargs');
+
 const Engineer = require('../lib/Engineer');
 
 // creates object
