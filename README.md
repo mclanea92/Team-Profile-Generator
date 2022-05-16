@@ -15,7 +15,7 @@
   - jest
 
   ## Video Tutorial
-
+  https://drive.google.com/file/d/1b8gzGcPvOARZZtDIVN1PHdWWMGo1RfRe/view?usp=sharing 
 
   ## GitHub URL
   https://github.com/mclanea92/Team-Profile-Generator
